@@ -1,4 +1,8 @@
+import 'package:animated_splash_screen/animated_splash_screen.dart';
+import 'package:base_project/pages/splash/splash_screen.dart';
+import 'package:base_project/resources/app_style.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,11 +14,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        textTheme: TEXT_THEME_DEFAULT,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: AnimatedSplashScreen(
+          duration: 3000,
+          splash: Icons.home,
+          nextScreen: MyHomePage(title: "Title",),
+          splashTransition: SplashTransition.fadeTransition,
+          pageTransitionType: PageTransitionType.scale,
+          backgroundColor: Colors.blue),
     );
   }
 }
