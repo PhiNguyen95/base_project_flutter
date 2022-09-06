@@ -1,8 +1,9 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:base_project/pages/splash/splash_screen.dart';
+import 'package:base_project/resources/app_color.dart';
 import 'package:base_project/resources/app_style.dart';
 import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,65 +16,26 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Car SOS',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         textTheme: TEXT_THEME_DEFAULT,
-      ),
-      home: AnimatedSplashScreen(
-          duration: 3000,
-          splash: Icons.home,
-          nextScreen: MyHomePage(title: "Title",),
-          splashTransition: SplashTransition.fadeTransition,
-          pageTransitionType: PageTransitionType.scale,
-          backgroundColor: Colors.blue),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            elevation: 0,
+            backgroundColor: kCarAppPurple,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8.0),
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+            textStyle: GoogleFonts.openSans(
+              textStyle: Theme.of(context).textTheme.bodyText2,
             ),
-          ],
+            maximumSize: const Size(double.infinity, 56),
+            minimumSize: const Size(double.infinity, 56),
+          ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
+      home: const SplashScreen(),
     );
   }
 }

@@ -6,4 +6,4 @@ const kCarAppBlackText = Color(0xFF3B414B);
 const kCarAppGreyText = Color(0xFF757F8C);
 const kCarAppWhite = Color(0xFFFFFFFF);
 
-const double kDefaultPadding = 20.0;
+const double kDefaultPadding = 16.0;
