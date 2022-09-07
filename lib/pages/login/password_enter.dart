@@ -36,7 +36,7 @@ class PasswordEnter extends StatelessWidget {
               ),
               TextFormField(
                 obscureText: true,
-                textInputAction: TextInputAction.done,
+                textInputAction: TextInputAction.next,
                 cursorColor: kCarAppPurple,
                 decoration: const InputDecoration(
                   hintText: "Password",

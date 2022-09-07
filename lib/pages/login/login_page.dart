@@ -1,3 +1,4 @@
+import 'package:base_project/pages/app_main_screen/WelcomeHomeScreen.dart';
 import 'package:base_project/pages/login/phone_number_enter.dart';
 import 'package:base_project/pages/login/verification_code.dart';
 import 'package:base_project/resources/app_color.dart';
@@ -75,7 +76,14 @@ class LoginPage extends StatelessWidget {
               const SizedBox(
                 height: kDefaultPadding * 3,
               ),
-              ElevatedButton(onPressed: () {}, child: const Text('Login')),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return MapSample();
+                    }));
+                  },
+                  child: const Text('Login')),
               const SizedBox(
                 height: kDefaultPadding * 3,
               ),
@@ -90,14 +98,13 @@ class LoginPage extends StatelessWidget {
                       text: 'Sign up',
                       style: GoogleFonts.openSans(
                           textStyle: Theme.of(context).textTheme.headline4),
-                      recognizer: TapGestureRecognizer()..onTap = () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) {
-                              return const PhoneNumberEnter();
-                            })
-                          );
-                      })
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return const PhoneNumberEnter();
+                          }));
+                        })
                 ]),
               ),
               const Spacer(

@@ -36,7 +36,7 @@ class PhoneNumberEnter extends StatelessWidget {
               ),
               TextFormField(
                 keyboardType: TextInputType.phone,
-                textInputAction: TextInputAction.next,
+                textInputAction: TextInputAction.done,
                 cursorColor: kCarAppPurple,
                 decoration: const InputDecoration(
                   hintText: "Phone Number",
