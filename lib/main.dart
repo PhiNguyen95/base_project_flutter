@@ -1,4 +1,3 @@
-import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:base_project/pages/splash/splash_screen.dart';
 import 'package:base_project/resources/app_color.dart';
 import 'package:base_project/resources/app_style.dart';
