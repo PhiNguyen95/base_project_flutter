@@ -5,6 +5,13 @@ class ReportsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text('Reports');
+    return SafeArea(
+      child: Scaffold(
+        body: Text(
+          'Reports',
+          style: Theme.of(context).textTheme.bodyText1,
+        ),
+      ),
+    );
   }
 }

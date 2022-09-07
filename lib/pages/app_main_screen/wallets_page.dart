@@ -5,6 +5,13 @@ class WalletsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text('Wallets');
+    return SafeArea(
+      child: Scaffold(
+        body: Text(
+          'Wallets',
+          style: Theme.of(context).textTheme.bodyText1,
+        ),
+      ),
+    );;
   }
 }

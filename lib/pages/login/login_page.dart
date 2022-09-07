@@ -1,7 +1,5 @@
-import 'package:base_project/pages/app_main_screen/WelcomeHomeScreen.dart';
-import 'package:base_project/pages/app_main_screen/home_page.dart';
+import 'package:base_project/pages/app_main_screen/home_bottom_appbar.dart';
 import 'package:base_project/pages/login/phone_number_enter.dart';
-import 'package:base_project/pages/login/verification_code.dart';
 import 'package:base_project/resources/app_color.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -81,7 +79,7 @@ class LoginPage extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return HomePage();
+                      return const HomePageAppBar();
                     }));
                   },
                   child: const Text('Login')),

@@ -5,6 +5,13 @@ class SettingsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text('Settings');
+    return SafeArea(
+      child: Scaffold(
+        body: Text(
+          'Settings',
+          style: Theme.of(context).textTheme.bodyText1,
+        ),
+      ),
+    );;
   }
 }
