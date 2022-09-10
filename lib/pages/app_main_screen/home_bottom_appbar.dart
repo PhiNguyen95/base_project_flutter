@@ -1,3 +1,4 @@
+import 'package:base_project/components/drawer.dart';
 import 'package:base_project/pages/app_main_screen/reports_page.dart';
 import 'package:base_project/pages/app_main_screen/settings_page.dart';
 import 'package:base_project/pages/app_main_screen/wallets_page.dart';
@@ -16,6 +17,8 @@ class HomePageAppBar extends StatelessWidget {
     final PageController pageController = PageController();
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(title: const Text('Car SOS')),
+        drawer: const CustomDrawer(),
         body: PageView(
           controller: pageController,
           children: <Widget>[
