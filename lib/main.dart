@@ -22,12 +22,12 @@ class MyApp extends StatelessWidget {
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             elevation: 0,
-            backgroundColor: kCarAppPurple,
+            backgroundColor: kColorPurple,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8.0),
             ),
             textStyle: GoogleFonts.openSans(
-              textStyle: Theme.of(context).textTheme.bodyText2,
+              textStyle: Theme.of(context).textTheme.bodyMedium,
             ),
             maximumSize: const Size(double.infinity, 56),
             minimumSize: const Size(double.infinity, 56),

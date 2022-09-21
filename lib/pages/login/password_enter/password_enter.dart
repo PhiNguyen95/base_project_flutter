@@ -1,13 +1,13 @@
-import 'package:base_project/pages/login/verification_code.dart';
+import 'package:base_project/pages/login/verification_code/verification_code.dart';
 import 'package:base_project/resources/app_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../gen/assets.gen.dart';
+import '../../../gen/assets.gen.dart';
 
-class PhoneNumberEnter extends StatelessWidget {
-  const PhoneNumberEnter({Key? key}) : super(key: key);
+class PasswordEnter extends StatelessWidget {
+  const PasswordEnter({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class PhoneNumberEnter extends StatelessWidget {
                 ),
               ),
               Text(
-                'Enter your phone number',
+                'Enter your password',
                 style: GoogleFonts.openSans(
                     textStyle: Theme.of(context).textTheme.bodyText1),
               ),
@@ -35,11 +35,25 @@ class PhoneNumberEnter extends StatelessWidget {
                 height: kDefaultPadding * 3,
               ),
               TextFormField(
-                keyboardType: TextInputType.phone,
-                textInputAction: TextInputAction.done,
-                cursorColor: kCarAppPurple,
+                obscureText: true,
+                textInputAction: TextInputAction.next,
+                cursorColor: kColorPurple,
                 decoration: const InputDecoration(
-                  hintText: "Phone Number",
+                  hintText: "Password",
+                  contentPadding: EdgeInsets.fromLTRB(
+                    kDefaultPadding * 2,
+                    kDefaultPadding,
+                    kDefaultPadding * 2,
+                    kDefaultPadding,
+                  ),
+                ),
+              ),
+              TextFormField(
+                obscureText: true,
+                textInputAction: TextInputAction.done,
+                cursorColor: kColorPurple,
+                decoration: const InputDecoration(
+                  hintText: "Confirm Password",
                   contentPadding: EdgeInsets.fromLTRB(
                     kDefaultPadding * 2,
                     kDefaultPadding,
@@ -51,12 +65,8 @@ class PhoneNumberEnter extends StatelessWidget {
               const SizedBox(
                 height: kDefaultPadding * 4,
               ),
-              ElevatedButton(onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) {
-                      return const VerificationCode();
-                    }));
-              }, child: const Text('Next')),
+              ElevatedButton(
+                  onPressed: () {}, child: const Text('Create Account')),
               const Spacer(
                 flex: 1,
               ),

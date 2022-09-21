@@ -1,4 +1,4 @@
-import 'package:base_project/pages/login/login_page.dart';
+import 'package:base_project/pages/login/login_page/login_page.dart';
 import 'package:base_project/resources/app_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -37,13 +37,13 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
       titleTextStyle: TextStyle(
         fontSize: 26.0,
         fontWeight: FontWeight.w700,
-        color: kCarAppBlackText,
+        color: kColorBlackText,
         fontFamily: 'OpenSans',
       ),
       bodyTextStyle: TextStyle(
         fontSize: 18.0,
         fontWeight: FontWeight.w500,
-        color: kCarAppGreyText,
+        color: kColorGrey,
         fontFamily: 'OpenSans',
       ),
       bodyPadding: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),

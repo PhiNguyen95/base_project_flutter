@@ -1,10 +1,10 @@
-import 'package:base_project/pages/login/password_enter.dart';
+import 'package:base_project/pages/login/password_enter/password_enter.dart';
 import 'package:base_project/resources/app_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
-import '../../gen/assets.gen.dart';
+import '../../../gen/assets.gen.dart';
 
 class VerificationCode extends StatelessWidget {
   const VerificationCode({Key? key}) : super(key: key);
@@ -42,11 +42,11 @@ class VerificationCode extends StatelessWidget {
                   shape: PinCodeFieldShape.box,
                   borderRadius: BorderRadius.circular(kDefaultPadding),
                   inactiveFillColor: Colors.white70,
-                  errorBorderColor: kCarAppPurple,
-                  selectedColor: kCarAppPurple,
-                  selectedFillColor: kCarAppPurple,
-                  activeColor: kCarAppPurple,
-                  activeFillColor: kCarAppPurple,
+                  errorBorderColor: kColorPurple,
+                  selectedColor: kColorPurple,
+                  selectedFillColor: kColorPurple,
+                  activeColor: kColorPurple,
+                  activeFillColor: kColorPurple,
                   fieldHeight: 80,
                   fieldWidth: 80,
                 ),

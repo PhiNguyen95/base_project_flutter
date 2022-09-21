@@ -1,12 +1,13 @@
-import 'package:base_project/pages/app_main_screen/reports_page.dart';
-import 'package:base_project/pages/app_main_screen/settings_page.dart';
-import 'package:base_project/pages/app_main_screen/wallets_page.dart';
+import 'package:base_project/components/custom_drawer.dart';
+import 'package:base_project/pages/main_pages/reports_screen/reports_page.dart';
+import 'package:base_project/pages/main_pages/settings_screen/settings_page.dart';
+import 'package:base_project/pages/main_pages/wallets_screen/wallets_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../gen/assets.gen.dart';
 import '../../resources/app_color.dart';
-import 'home_screen.dart';
+import 'map_screen/home_screen.dart';
 
 class HomePageAppBar extends StatelessWidget {
   const HomePageAppBar({Key? key}) : super(key: key);
@@ -16,10 +17,14 @@ class HomePageAppBar extends StatelessWidget {
     final PageController pageController = PageController();
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          title: const Text('Car SOS'),
+        ),
+        drawer: const CustomDrawer(),
         body: PageView(
           controller: pageController,
           children: <Widget>[
-            MapSample(),
+            HomeScreen(),
             WalletsPage(),
             ReportsPage(),
             SettingsPage(),
@@ -36,8 +41,8 @@ class HomePageAppBar extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 IconButton(
-                  focusColor: kCarAppPurple,
-                  hoverColor: kCarAppPurple,
+                  focusColor: kColorPurple,
+                  hoverColor: kColorPurple,
                   tooltip: 'Home',
                   icon: SvgPicture.asset(Assets.icons.home),
                   onPressed: () {
@@ -45,8 +50,8 @@ class HomePageAppBar extends StatelessWidget {
                   },
                 ),
                 IconButton(
-                  focusColor: kCarAppPurple,
-                  hoverColor: kCarAppPurple,
+                  focusColor: kColorPurple,
+                  hoverColor: kColorPurple,
                   tooltip: 'Wallet',
                   icon: SvgPicture.asset(Assets.icons.wallets),
                   onPressed: () {
@@ -57,8 +62,8 @@ class HomePageAppBar extends StatelessWidget {
                   width: 20,
                 ),
                 IconButton(
-                  focusColor: kCarAppPurple,
-                  hoverColor: kCarAppPurple,
+                  focusColor: kColorPurple,
+                  hoverColor: kColorPurple,
                   tooltip: 'Report',
                   icon: SvgPicture.asset(Assets.icons.reports),
                   onPressed: () {
@@ -66,8 +71,8 @@ class HomePageAppBar extends StatelessWidget {
                   },
                 ),
                 IconButton(
-                  focusColor: kCarAppPurple,
-                  hoverColor: kCarAppPurple,
+                  focusColor: kColorPurple,
+                  hoverColor: kColorPurple,
                   icon: SvgPicture.asset(Assets.icons.settings),
                   onPressed: () {
                     pageController.jumpToPage(3);
@@ -80,7 +85,7 @@ class HomePageAppBar extends StatelessWidget {
         // implement the floating button
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
-          backgroundColor: kCarAppPurple,
+          backgroundColor: kColorPurple,
           child: Transform.rotate(
             angle: (45 * (3.1415927 / 180)),
             child: const Icon(Icons.navigation),

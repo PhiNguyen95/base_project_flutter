@@ -1,12 +1,12 @@
-import 'package:base_project/pages/app_main_screen/home_bottom_appbar.dart';
-import 'package:base_project/pages/login/phone_number_enter.dart';
+import 'package:base_project/pages/login/phone_number_enter/phone_number_enter.dart';
 import 'package:base_project/resources/app_color.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../gen/assets.gen.dart';
+import '../../../gen/assets.gen.dart';
+import '../../main_pages/homepage_appbar.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -31,7 +31,7 @@ class LoginPage extends StatelessWidget {
               TextFormField(
                 keyboardType: TextInputType.phone,
                 textInputAction: TextInputAction.next,
-                cursorColor: kCarAppPurple,
+                cursorColor: kColorPurple,
                 decoration: const InputDecoration(
                   hintText: "Phone Number",
                   contentPadding: EdgeInsets.fromLTRB(
@@ -48,7 +48,7 @@ class LoginPage extends StatelessWidget {
               TextFormField(
                 obscureText: true,
                 textInputAction: TextInputAction.done,
-                cursorColor: kCarAppPurple,
+                cursorColor: kColorPurple,
                 decoration: const InputDecoration(
                   hintText: "Password",
                   contentPadding: EdgeInsets.fromLTRB(
