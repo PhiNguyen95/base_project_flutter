@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:visibility_detector/visibility_detector.dart';
+import '../components/error_popup.dart';
+import '../components/loading_popup.dart';
 import 'base_viewmodel.dart';
 
 mixin MixinBasePage<T extends BaseViewModel> {
@@ -19,7 +21,7 @@ mixin MixinBasePage<T extends BaseViewModel> {
         _provider = create();
 
         _provider.onShowLoading = () {
-          // LoadingPopup.show(context);
+          LoadingPopup.show(context);
         };
 
         _provider.onHideLoading = () {
@@ -27,7 +29,7 @@ mixin MixinBasePage<T extends BaseViewModel> {
         };
 
         _provider.onShowError = (message) {
-          // ErrorPopup.show(context, message);
+          ErrorPopup.show(context, message);
         };
 
         initialise(context);

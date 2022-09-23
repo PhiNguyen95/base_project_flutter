@@ -1,9 +1,7 @@
-import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 
+
 abstract class BaseViewModel extends ChangeNotifier {
-  // final api = locator<ApiClient>();
-  // final prefs = locator<SharedPrefs>();
   bool _isFirst = true;
   bool _showLoading = false;
   late VoidCallback onShowLoading, onHideLoading;
@@ -35,19 +33,6 @@ abstract class BaseViewModel extends ChangeNotifier {
   void showError(String message) {
     hideLoading();
     onShowError.call(message);
-  }
-
-  void showErrorConnection() {
-    hideLoading();
-
-    (Connectivity().checkConnectivity()).then((value) {
-      if (value == ConnectivityResult.none) {
-        // showError(S.of(MedicalApp.context!).message_error_lost_connect);
-        return;
-      }
-
-      // showError(S.of(MedicalApp.context!).message_error_process_failed);
-    });
   }
 
   void appear() {

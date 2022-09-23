@@ -20,6 +20,7 @@ dependencies:
   connectivity_plus: ^2.3.6+1
   sqflite: any
   path: any
+  http: ^0.13.5
 
   dio: ^4.0.6
   retrofit: ^3.0.1+1
